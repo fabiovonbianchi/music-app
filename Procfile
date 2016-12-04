@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar --lastfm.secretKey=b741f6eba073a07b0a5774e9e5a90894
