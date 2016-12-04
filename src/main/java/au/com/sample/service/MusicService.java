@@ -40,7 +40,7 @@ public class MusicService {
 				.map(a -> new Artist().withId(a.getMbid()).withName(a.getName())
 				.withImageURL(a.getImageURL(ImageSize.MEDIUM))).collect(toList());
 		
-		// total amount of items could be 
+		// total amount of items could be differ from actual by max defaultPageSize - 1
 		long totalElements = artists.getTotalPages() * defaultPageSize;
 		return new Page<Artist>(artists.getPage(), totalElements, defaultPageSize, result);
 
