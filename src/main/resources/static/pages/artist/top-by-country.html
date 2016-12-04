@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<table class="table table-hover">
+			<tr ng-repeat="artist in artists.elements" />
+			<td class="tl-image"><img role="button"
+				ng-src="{{artist.imageURL}}" ng-click="getTopTracks(artist)" /></td>
+			<td><h3>{{artist.name}}</h3></td>
+			</tr>
+
+		</table>
+		<ul uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="5"
+			max-size="5" class="pagination-sm" boundary-links="true"
+			ng-change="pageChanged(currentPage)"></ul>
+	</div>
+</div>
